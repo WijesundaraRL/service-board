@@ -11,7 +11,12 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://your-frontend.vercel.app", // we'll get this real URL in the next step
+  ],
+}));
 app.use(express.json());
 
 // DB Connection
