@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:3000",
-    "https://your-frontend.vercel.app", // we'll get this real URL in the next step
+    "service-board-k3w3ttx1r-team-dev-fury.vercel.app", // we'll get this real URL in the next step
   ],
 }));
 app.use(express.json());
