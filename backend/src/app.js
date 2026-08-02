@@ -19,6 +19,9 @@ app.use(cors({
 }));
 app.use(express.json());
 
+
+console.log('DEBUG - MONGO_URI value:', JSON.stringify(process.env.MONGO_URI));
+console.log('DEBUG - All env keys with MONGO:', Object.keys(process.env).filter(k => k.includes('MONGO')));
 // DB Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
